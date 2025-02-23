@@ -63,10 +63,10 @@ defmodule XIO.Mixfile do
       {:ranch, "~> 1.7.1", override: true},
       {:cowboy, "~> 2.8.0", override: true},
       {:cowlib, "~> 2.9.0", override: true},
-      {:emqx, github: "rosemqx/emqx", tag: "master"},
-      #{:emqtt, {git, "https://github.com/emqx/emqtt", {tag, "v1.2.0"}}}]}.
-      #{:emqx_dashboard, github: "rosemqx/emqx-dashboard", ref: "master"},
-      #{:ex_doc, "~> 0.11", only: :dev}
+      {:minirest, github: "rosemqx/minirest", ref: "emqx42", override: true},
+      {:emqx, github: "rosemqx/emqx", tag: "master", override: true},
+      {:emqx_dashboard, github: "rosemqx/emqx-dashboard", ref: "master"},
+      {:ex_doc, "~> 0.11", only: :dev}
     ]
   end
 end
