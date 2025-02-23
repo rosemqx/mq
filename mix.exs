@@ -3,7 +3,7 @@ defmodule XIO.Mixfile do
 
   def project() do
     [
-      app: :xio,
+      app: :rosemqx,
       version: "0.7.0",
       elixir: "~> 1.7",
       description: "XIO EMQ X 3.0 Elixir",
@@ -26,7 +26,7 @@ defmodule XIO.Mixfile do
     [
       mod: {:xio, []},
       # for mix release
-      extra_applications: [:os_mon],
+#      extra_applications: [:os_mon],
       application: [
         :inets,
         :mnesia,
@@ -39,33 +39,34 @@ defmodule XIO.Mixfile do
         :syntax_tools,
         :crypto,
         :cowlib,
-        :ekka,
+        #:ekka,
         :goldrush,
         :public_key,
         :lager,
         :ssl,
         :ranch,
-        :esockd,
+       # :esockd,
         :gen_rpc,
         :ssl_verify_fun,
         :cowboy,
-        :emqx,
-        :os_mon,
-        :minirest,
-        :emqx_dashboard
+       # :emqx,
+        :os_mon
+        #:minirest,
+      #  :emqx_dashboard
       ]
     ]
   end
 
   def deps() do
     [
-      {:kvs, "~> 7.11.5", override: true},
+      {:kvs, "~> 11.9.1", override: true},
       {:ranch, "~> 1.7.1", override: true},
       {:cowboy, "~> 2.8.0", override: true},
       {:cowlib, "~> 2.9.0", override: true},
-      {:emqx, github: "rosemqx/emqx", ref: "master"},
-      {:emqx_dashboard, github: "rosemqx/emqx-dashboard", ref: "master"},
-      {:ex_doc, "~> 0.11", only: :dev}
+      {:emqx, github: "rosemqx/emqx", tag: "master"},
+      #{:emqtt, {git, "https://github.com/emqx/emqtt", {tag, "v1.2.0"}}}]}.
+      #{:emqx_dashboard, github: "rosemqx/emqx-dashboard", ref: "master"},
+      #{:ex_doc, "~> 0.11", only: :dev}
     ]
   end
 end
