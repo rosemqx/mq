@@ -22,40 +22,40 @@ defmodule XIO.Mixfile do
     ]
   end
 
-  def application() do
-    [
-      mod: {:xio, []},
-      # for mix release
-#      extra_applications: [:os_mon],
-      application: [
-        :inets,
-        :mnesia,
-        :gproc,
-        :neotoma,
-        :replayq,
-        :clique,
-        :asn1,
-        :compiler,
-        :syntax_tools,
-        :crypto,
-        :cowlib,
-        #:ekka,
-        :goldrush,
-        :public_key,
-        :lager,
-        :ssl,
-        :ranch,
-       # :esockd,
-        :gen_rpc,
-        :ssl_verify_fun,
-        :cowboy,
-       # :emqx,
-        :os_mon
-        #:minirest,
-      #  :emqx_dashboard
-      ]
-    ]
-  end
+ #  def application() do
+#     [
+#       mod: {:xio, []},
+#       # for mix release
+# #      extra_applications: [:os_mon],
+#       application: [
+#         :inets,
+#         :mnesia,
+#         :gproc,
+#         :neotoma,
+#         :replayq,
+#         :clique,
+#         :asn1,
+#         :compiler,
+#         :syntax_tools,
+#         :crypto,
+#         :cowlib,
+#         #:ekka,
+#         :goldrush,
+#         :public_key,
+#         :lager,
+#         :ssl,
+#         :ranch,
+#        # :esockd,
+#         :gen_rpc,
+#         :ssl_verify_fun,
+#         :cowboy,
+#        # :emqx,
+#         :os_mon
+#         #:minirest,
+#       #  :emqx_dashboard
+#       ]
+#     ]
+#   end
 
   def deps() do
     [
