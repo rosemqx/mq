@@ -15,47 +15,47 @@ defmodule XIO.Mixfile do
   def package do
     [
       files: ~w(doc include lib src mix.exs LICENSE),
-      licenses: ["ISC"]
-      # maintainers: ["Namdak Tonpa"],
-      # name: :xio,
-      # links: %{"GitHub" => "https://github.com/enterprizing/xio"}
+      licenses: ["ISC"],
+      maintainers: ["Namdak Tonpa"],
+      name: :xio,
+      links: %{"GitHub" => "https://github.com/enterprizing/xio"}
     ]
   end
 
- #  def application() do
-#     [
-#       mod: {:xio, []},
-#       # for mix release
-# #      extra_applications: [:os_mon],
-#       application: [
-#         :inets,
-#         :mnesia,
-#         :gproc,
-#         :neotoma,
-#         :replayq,
-#         :clique,
-#         :asn1,
-#         :compiler,
-#         :syntax_tools,
-#         :crypto,
-#         :cowlib,
-#         #:ekka,
-#         :goldrush,
-#         :public_key,
-#         :lager,
-#         :ssl,
-#         :ranch,
-#        # :esockd,
-#         :gen_rpc,
-#         :ssl_verify_fun,
-#         :cowboy,
-#        # :emqx,
-#         :os_mon
-#         #:minirest,
-#       #  :emqx_dashboard
-#       ]
-#     ]
-#   end
+  def application() do
+    [
+      mod: {:xio, []},
+      # for mix release
+      extra_applications: [:os_mon],
+      application: [
+        :inets,
+        :mnesia,
+        :gproc,
+        :neotoma,
+        :replayq,
+        :clique,
+        :asn1,
+        :compiler,
+        :syntax_tools,
+        :crypto,
+        :cowlib,
+        :ekka,
+        :goldrush,
+        :public_key,
+        :lager,
+        :ssl,
+        :ranch,
+        :esockd,
+        :gen_rpc,
+        :ssl_verify_fun,
+        :cowboy,
+        :emqx,
+     #   :os_mon,
+        :minirest,
+       :emqx_dashboard
+      ]
+    ]
+  end
 
   def deps() do
     [
@@ -63,6 +63,7 @@ defmodule XIO.Mixfile do
       {:ranch, "~> 1.7.1", override: true},
       {:cowboy, "~> 2.8.0", override: true},
       {:cowlib, "~> 2.9.0", override: true},
+      {:jsone, "~> 1.5.3", override: true},
       {:minirest, github: "rosemqx/minirest", ref: "emqx42", override: true},
       {:emqx, github: "rosemqx/emqx", tag: "master", override: true},
       {:emqx_dashboard, github: "rosemqx/emqx-dashboard", ref: "master"},
