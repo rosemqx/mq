@@ -1,0 +1,12 @@
+{application, rosemqx,
+
+[
+ {description, "XIO EMQ"},
+ {vxn, "0.0.1"},
+ {registered,[]},
+ {applications, [kernel, stdlib]},
+ {mod, {rosemqx, []}},
+ {env, []}
+]
+
+}.
