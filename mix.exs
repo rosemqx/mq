@@ -26,7 +26,7 @@ defmodule XIO.Mixfile do
     [
       mod: {:rosemqx, []},
       # for mix release
-      extra_applications: [:os_mon, :observer, :wx]
+      extra_applications: [:logger, :wx, :observer, :runtime_tools, :os_mon]
       # application: [
       #   :inets,
       #   # :mnesia,
@@ -66,7 +66,7 @@ defmodule XIO.Mixfile do
       {:jsone, "~> 1.5.3", override: true},
       {:minirest, github: "rosemqx/minirest", ref: "emqx42", override: true},
       {:emqx, github: "rosemqx/emqx", tag: "master", override: true},
-      #      {:emqx_dashboard, github: "rosemqx/emqx-dashboard", ref: "master"},
+      # {:emqx_dashboard, github: "rosemqx/emqx-dashboard", ref: "master"},
       {:ex_doc, "~> 0.11", only: :dev}
     ]
   end
